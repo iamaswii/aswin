@@ -1,0 +1,2307 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GreenSpace — Озеленение офисных помещений в Москве</title>
+  <meta name="description" content="Создайте уютное рабочее пространство с помощью нашего зеленого декора. Профессиональное озеленение офисов, ресторанов и коммерческих зон в Москве.">
+  <link rel="icon" type="image/png" href="assets/leaf_particle1.png">
+  
+  <!-- Premium Fonts from Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="portfooo.css">
+</head>
+<body>
+  <!-- Custom Cinematic Ambient Lighting Effects -->
+  <div class="glow-orb glow-1"></div>
+  <div class="glow-orb glow-2"></div>
+  <div class="glow-orb glow-3"></div>
+  <!-- Smooth Floating Interactive Canvas Background for Leaves -->
+  <canvas id="leafCanvas" class="leaf-canvas"></canvas>
+  <!-- Custom Cursor Wrapper (Premium Micro-Interaction) -->
+  <div class="custom-cursor" id="customCursor"></div>
+  <div class="custom-cursor-follower" id="cursorFollower"></div>
+  <!-- Header & Navigation -->
+  <header class="main-header" id="header">
+    <div class="header-container">
+      <a href="#" class="logo">
+        <span class="logo-badge">GreenSpace</span>
+      </a>
+      
+      <nav class="navbar" id="navbar">
+        <a href="#about" class="nav-link" data-ru="О нас" data-en="About Us">О нас</a>
+        <a href="#why-us" class="nav-link" data-ru="Почему мы" data-en="Why Us">Почему мы</a>
+        <a href="#contacts" class="nav-link" data-ru="Контакты" data-en="Contacts">Контакты</a>
+      </nav>
+      <div class="header-right">
+        <span class="location" data-ru="Москва" data-en="Moscow">Москва</span>
+        
+        <!-- Language Selector -->
+        <button class="lang-toggle" id="langToggle" aria-label="Toggle language">
+          <span class="lang-text active">RU</span>
+          <span class="lang-divider">|</span>
+          <span class="lang-text">EN</span>
+        </button>
+        <a href="#catalog" class="cart-btn" id="openCatalogBtnHeader" aria-label="Catalog">
+          <svg class="cart-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M6 2L3 6V20C3 20.5304 3.21071 21.0391 3.58579 21.4142C3.96086 21.7893 4.46957 22 5 22H19C19.5304 22 20.0391 21.7893 20.4142 21.4142C20.7893 21.0391 21 20.5304 21 20V6L18 2H6Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M3 6H21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M16 10C16 11.0609 15.5786 12.0783 14.8284 12.8284C14.0783 13.5786 13.0609 14 12 14C10.9391 14 9.92172 13.5786 9.17157 12.8284C8.42143 12.0783 8 11.0609 8 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </header>
+  <!-- Main Showcase Container -->
+  <main class="page-container">
+    <!-- Hero Section -->
+    <section class="hero-section" id="hero">
+      <div class="hero-bg-layer" id="heroBg"></div>
+      
+      <div class="hero-content">
+        <div class="hero-left text-reveal-container">
+          <h1 class="hero-title animate-on-scroll" data-ru="Озеленение офисных помещений" data-en="Office Greening & Landscaping">
+            Озеленение офисных помещений
+          </h1>
+          <p class="hero-subtitle animate-on-scroll" data-ru="Создайте уютное рабочее пространство с помощью нашего зеленого декора" data-en="Create a cozy, refreshing workspace with our bespoke living botanical decor">
+            Создайте уютное рабочее пространство с помощью нашего зеленого декора
+          </p>
+        </div>
+        <!-- Premium 3D Potted Plant Floating Card -->
+        <div class="hero-right animate-on-scroll delay-1">
+          <div class="premium-glass-card plant-card-3d" id="heroPlantCard">
+            <div class="plant-image-container">
+              <img src="assets/potted_plant.png" alt="Premium Potted Plant" class="plant-image">
+            </div>
+            <button class="catalog-cta-btn" id="openCatalogBtn">
+              <span data-ru="Открыть каталог" data-en="Open Catalog">Открыть каталог</span>
+              <span class="arrow-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Info & Showcase Section -->
+    <section class="about-section" id="about">
+      <div class="about-grid">
+        <div class="about-title-box animate-on-scroll">
+          <h2 data-ru="Превращаем офисы в комфортные зоны для работы" data-en="Transforming offices into inspiring areas for work">
+            Превращаем офисы в комфортные зоны для работы
+          </h2>
+        </div>
+        
+        <div class="about-text-box animate-on-scroll delay-1">
+          <p data-ru="Даже деловая среда должна быть приятной, поэтому мы создаем уникальные проекты, которые способствуют продуктивной работе ваших сотрудников" data-en="Even a high-pressure business environment should be pleasant. That is why we create unique green installations that boost your team's productivity and daily well-being.">
+            Даже деловая среда должна быть приятной, поэтому мы создаем уникальные проекты, которые способствуют продуктивной работе ваших сотрудников
+          </p>
+        </div>
+      </div>
+      <!-- Modern Office Work space Card & Stats Panels -->
+      <div class="showcase-container">
+        
+        <!-- Video Play Office Showcase Card -->
+        <div class="office-showcase-card animate-on-scroll" id="officeShowcase">
+          <div class="video-overlay">
+            <button class="play-btn" aria-label="Play Case Video" id="playVideoBtn">
+              <span class="play-icon-triangle"></span>
+            </button>
+          </div>
+          <img src="assets/office_greening.png" alt="Lush Modern Office Layout" class="showcase-img">
+        </div>
+        <!-- Vertically Stacked Glass Stats -->
+        <div class="stats-panel-stack">
+          <div class="stat-card glass-panel animate-on-scroll delay-1">
+            <h3 class="stat-number">10 <span class="stat-label-unit" data-ru="лет" data-en="years">лет</span></h3>
+            <p class="stat-desc" data-ru="на рынке" data-en="in the market">на рынке</p>
+          </div>
+          <div class="stat-card glass-panel animate-on-scroll delay-2">
+            <h3 class="stat-number">500+</h3>
+            <p class="stat-desc" data-ru="выполненных проектов" data-en="completed projects">выполненных проектов</p>
+          </div>
+          <div class="stat-card glass-panel animate-on-scroll delay-3">
+            <h3 class="stat-number">99%</h3>
+            <p class="stat-desc" data-ru="довольных клиентов" data-en="satisfied clients">довольных клиентов</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Why Us Section (4 Reasons Grid) -->
+    <section class="why-us-section" id="why-us">
+      <h2 class="section-title text-center animate-on-scroll" data-ru="4 причины, почему с нами удобно и надежно работать" data-en="4 reasons why working with us is seamless and reliable">
+        4 причины, почему с нами удобно и надежно работать
+      </h2>
+      <div class="reasons-grid">
+        <!-- Reason 1 -->
+        <div class="reason-card glass-panel animate-on-scroll">
+          <div class="reason-number">1</div>
+          <h3 class="reason-title" data-ru="Качество" data-en="Quality">Качество</h3>
+          <p class="reason-text" data-ru="Используем только лучшие растения, которые сохраняют свой вид на протяжении долгих лет" data-en="We source only premium plants that preserve their lush, vibrant appearance for many years.">
+            Используем только лучшие растения, которые сохраняют свой вид на протяжении долгих лет
+          </p>
+        </div>
+        <!-- Reason 2 -->
+        <div class="reason-card glass-panel animate-on-scroll delay-1">
+          <div class="reason-number">2</div>
+          <h3 class="reason-title" data-ru="Скорость" data-en="Speed">Скорость</h3>
+          <p class="reason-text" data-ru="Ценим ваше время и гарантируем быстрый результат, сохранив при этом высокое качество" data-en="We value your time and guarantee swift execution while maintaining flawless aesthetic quality.">
+            Ценим ваше время и гарантируем быстрый результат, сохранив при этом высокое качество
+          </p>
+        </div>
+        <!-- Reason 3 -->
+        <div class="reason-card glass-panel animate-on-scroll delay-2">
+          <div class="reason-number">3</div>
+          <h3 class="reason-title" data-ru="Разнообразие" data-en="Variety">Разнообразие</h3>
+          <p class="reason-text" data-ru="Предлагаем широкий выбор оформления с учетом ваших пожеланий и бюджета" data-en="We offer an extensive selection of design layouts tailored to your exact style and budget.">
+            Предлагаем широкий выбор оформления с учетом ваших пожеланий и бюджета
+          </p>
+        </div>
+        <!-- Reason 4 -->
+        <div class="reason-card glass-panel animate-on-scroll delay-3">
+          <div class="reason-number">4</div>
+          <h3 class="reason-title" data-ru="Доступность" data-en="Accessibility">Доступность</h3>
+          <p class="reason-text" data-ru="Готовы реализовать проект любой сложности в любом уголке страны" data-en="We are fully equipped to implement green projects of any complexity nationwide.">
+            Готовы реализовать проект любой сложности в любом уголке страны
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- Interactive Form Section -->
+    <section class="contact-section" id="contacts">
+      <div class="contact-grid">
+        
+        <!-- Left Column: Botanical Bud Stem Overlay & Contact Hook -->
+        <div class="contact-left animate-on-scroll">
+          <div class="contact-content-wrapper">
+            <h2 class="contact-title" data-ru="Обсудим детали проекта?" data-en="Shall we discuss the details?">
+              Обсудим детали проекта?
+            </h2>
+            <p class="contact-subtitle" data-ru="Свяжитесь с нами" data-en="Get in touch with us">
+              Свяжитесь с нами
+            </p>
+            
+            <div class="social-links">
+              <a href="#" class="social-circle" aria-label="VK">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M15.66 2H8.34C3.73 2 2 3.73 2 8.34v7.32C2 20.27 3.73 22 8.34 22h7.32c4.61 0 6.34-1.73 6.34-6.34V8.34C22 3.73 20.27 2 15.66 2zm2.93 12.83c-.15.42-.48.74-.89.87-.58.19-1.22-.05-1.74-.46-.57-.46-1.12-1.01-1.68-1.5-.2-.18-.42-.23-.67-.12-.25.11-.37.31-.38.58v1.17c.01.27-.11.49-.36.57-.43.14-.88.16-1.33.1-.96-.13-1.82-.55-2.58-1.17a10.02 10.02 0 0 1-2.56-3.4c-.2-.43-.37-.88-.53-1.33-.09-.25-.03-.47.19-.58.21-.1.43-.11.66-.11.53.01.81.33.99.78.36.88.85 1.67 1.48 2.37.19.21.39.27.63.14.22-.11.3-.31.3-.57v-1.9c0-.44-.24-.71-.69-.76-.17-.02-.2-.07-.17-.23.05-.24.23-.42.48-.48.64-.15 1.28-.15 1.92.01.28.07.41.27.42.56v1.93c0 .2.08.36.26.43.18.07.32-.01.44-.14.61-.63 1.07-1.37 1.4-2.18.11-.27.27-.42.58-.42.45.01.9.01 1.35.01.19 0 .34.07.39.25.07.24-.01.44-.13.61-.41.59-.87 1.15-1.35 1.7-.22.25-.21.43.01.67.45.48.94.94 1.41 1.4.38.37.74.75.99 1.22z"/>
+                </svg>
+              </a>
+              <a href="#" class="social-circle" aria-label="Telegram">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21.198 2.43a2.242 2.242 0 0 0-2.235.078L3.66 11.23a2.23 2.23 0 0 0-.104 3.896l4.82 2.76 1.76 5.27a1 1 0 0 0 1.77.295l2.67-3.2 4.67 3.33a2.23 2.23 0 0 0 3.49-1.28l3.15-16.7a2.23 2.23 0 0 0-1.89-2.58z"/>
+                  <path d="M8.61 17.58l11.4-11.4"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+          
+          <!-- Large Foreground Interactive Botanical Stem Overlay -->
+          <div class="botanical-stem-wrapper" id="botanicalStem">
+            <img src="assets/botanical_stem.png" alt="Botanical Bud Detail" class="botanical-stem-img">
+          </div>
+        </div>
+        <!-- Right Column: Frosted Glass Form Deck -->
+        <div class="contact-right animate-on-scroll delay-1">
+          <form class="glass-form-deck" id="contactForm" novalidate>
+            <div class="form-group">
+              <input type="text" id="formName" required placeholder=" " class="form-input">
+              <label for="formName" class="form-label" data-ru="Имя" data-en="Name">Имя</label>
+              <span class="form-error" data-ru="Пожалуйста, введите ваше имя" data-en="Please enter your name">Пожалуйста, введите ваше имя</span>
+            </div>
+            <div class="form-group">
+              <input type="tel" id="formPhone" required placeholder=" " class="form-input">
+              <label for="formPhone" class="form-label" data-ru="Телефон" data-en="Phone Number">Телефон</label>
+              <span class="form-error" data-ru="Введите корректный номер телефона" data-en="Please enter a valid phone number">Введите корректный номер телефона</span>
+            </div>
+            <div class="form-group">
+              <textarea id="formComment" placeholder=" " class="form-input form-textarea" rows="4"></textarea>
+              <label for="formComment" class="form-label" data-ru="Комментарий" data-en="Comment">Комментарий</label>
+            </div>
+            <button type="submit" class="submit-btn" id="submitBtn">
+              <span class="btn-text" data-ru="Отправить" data-en="Send Proposal">Отправить</span>
+              <span class="success-icon-wrapper">
+                <svg class="success-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                  <path d="M20 6L9 17L4 12" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </span>
+            </button>
+            <p class="form-disclaimer" data-ru="Нажимая на кнопку, я даю согласие на обработку персональных данных" data-en="By clicking the button, you consent to the processing of personal data.">
+              Нажимая на кнопку, я даю согласие на обработку персональных данных
+            </p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+  <!-- Footer -->
+  <footer class="main-footer">
+    <div class="footer-container">
+      <div class="footer-left">
+        <nav class="footer-nav">
+          <a href="#about" class="footer-link" data-ru="О нас" data-en="About Us">О нас</a>
+          <a href="#catalog" class="footer-link" id="openCatalogBtnFooter" data-ru="Ассортимент" data-en="Catalog">Ассортимент</a>
+          <a href="#contacts" class="footer-link" data-ru="Заказать" data-en="Place Order">Заказать</a>
+          <a href="#contacts" class="footer-link" data-ru="Контакты" data-en="Contacts">Контакты</a>
+        </nav>
+      </div>
+      <div class="footer-right">
+        <span class="footer-logo">GreenSpace</span>
+      </div>
+    </div>
+  </footer>
+  <!-- ==================== PREMIUM INTERACTIVE MODALS ==================== -->
+  <!-- Modal 1: Premium Plant Catalog Showcase Modal -->
+  <div class="modal-overlay" id="catalogModal">
+    <div class="modal-container glass-modal-card">
+      <button class="modal-close-btn" id="closeCatalogBtn" aria-label="Close Modal">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+      <div class="modal-header-content">
+        <h2 class="modal-title" data-ru="Наш ассортимент" data-en="Our Plant Selection">Наш ассортимент</h2>
+        <p class="modal-subtitle" data-ru="Выберите идеальные растения для вашего рабочего пространства" data-en="Select the ideal botanicals for your corporate space">Выберите идеальные растения для вашего рабочего пространства</p>
+      </div>
+      <!-- Category Filter Tabs -->
+      <div class="catalog-filters">
+        <button class="filter-tab active" data-filter="all" data-ru="Все" data-en="All">Все</button>
+        <button class="filter-tab" data-filter="air" data-ru="Очищающие воздух" data-en="Air Purifying">Очищающие воздух</button>
+        <button class="filter-tab" data-filter="low" data-ru="Неприхотливые" data-en="Low Maintenance">Неприхотливые</button>
+        <button class="filter-tab" data-filter="floor" data-ru="Напольные" data-en="Tall & Floor">Напольные</button>
+      </div>
+      <!-- Plant Showcase Cards Grid -->
+      <div class="catalog-grid" id="catalogGrid">
+        <!-- Plant 1 -->
+        <div class="catalog-item-card glass-panel" data-category="air low">
+          <div class="item-img-box">
+            <img src="assets/potted_plant.png" alt="Philodendron" class="item-img">
+          </div>
+          <div class="item-info">
+            <h4 class="item-name" data-ru="Филодендрон Премиум" data-en="Premium Philodendron">Филодендрон Премиум</h4>
+            <p class="item-tags"><span class="item-tag air-tag" data-ru="Очищение" data-en="Purifying">Очищение</span> <span class="item-tag low-tag" data-ru="Неприхотливый" data-en="Low Care">Неприхотливый</span></p>
+            <p class="item-desc" data-ru="Идеально очищает воздух, любит рассеянный свет и редкий полив." data-en="Perfectly purifies air, thrives in indirect light and low-frequency watering.">Идеально очищает воздух, любит рассеянный свет и редкий полив.</p>
+          </div>
+        </div>
+        <!-- Plant 2 -->
+        <div class="catalog-item-card glass-panel" data-category="air floor">
+          <div class="item-img-box">
+            <img src="assets/potted_plant.png" alt="Sansevieria" class="item-img" style="filter: hue-rotate(40deg) saturate(1.1);">
+          </div>
+          <div class="item-info">
+            <h4 class="item-name" data-ru="Сансевиерия Лауренти" data-en="Sansevieria Laurentii">Сансевиерия Лауренти</h4>
+            <p class="item-tags"><span class="item-tag air-tag" data-ru="Кислород+" data-en="Oxygen+">Кислород+</span> <span class="item-tag floor-tag" data-ru="Высокое" data-en="Tall">Высокое</span></p>
+            <p class="item-desc" data-ru="Вырабатывает кислород круглосуточно. Отлично вписывается в угловые зоны." data-en="Generates oxygen around the clock. Fits perfectly into corporate corners.">Вырабатывает кислород круглосуточно. Отлично вписывается в угловые зоны.</p>
+          </div>
+        </div>
+        <!-- Plant 3 -->
+        <div class="catalog-item-card glass-panel" data-category="low">
+          <div class="item-img-box">
+            <img src="assets/potted_plant.png" alt="Zamioculcas" class="item-img" style="filter: hue-rotate(-30deg) brightness(0.9);">
+          </div>
+          <div class="item-info">
+            <h4 class="item-name" data-ru="Замиокулькас Замифолия" data-en="Zamioculcas Zamiifolia">Замиокулькас Замифолия</h4>
+            <p class="item-tags"><span class="item-tag low-tag" data-ru="Сверхстойкий" data-en="Ultra Hardy">Сверхстойкий</span></p>
+            <p class="item-desc" data-ru="Долларовое дерево. Практически неубиваемо, переносит сильную тень." data-en="Dollar tree. Nearly indestructible, tolerates heavy shadow and forgotten waterings.">Практически неубиваемо, переносит сильную тень.</p>
+          </div>
+        </div>
+        <!-- Plant 4 -->
+        <div class="catalog-item-card glass-panel" data-category="floor">
+          <div class="item-img-box">
+            <img src="assets/potted_plant.png" alt="Ficus Lyrata" class="item-img" style="filter: hue-rotate(75deg) brightness(1.05);">
+          </div>
+          <div class="item-info">
+            <h4 class="item-name" data-ru="Фикус Лирата Гранд" data-en="Ficus Lyrata Grand">Фикус Лирата Гранд</h4>
+            <p class="item-tags"><span class="item-tag floor-tag" data-ru="Напольное" data-en="Tall Floor">Напольное</span> <span class="item-tag air-tag" data-ru="Широколистное" data-en="Broad Leaf">Широколистное</span></p>
+            <p class="item-desc" data-ru="Крупное величественное дерево с огромными кожистыми листьями." data-en="A massive, majestic tree with huge textured violin-shaped leaves.">Крупное величественное дерево с огромными кожистыми листьями.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Modal 2: Premium Office Video Walkthrough Modal -->
+  <div class="modal-overlay" id="videoModal">
+    <div class="modal-container glass-modal-card video-modal-container">
+      <button class="modal-close-btn" id="closeVideoBtn" aria-label="Close Video Modal">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+      
+      <!-- Video Element with Ambient Glow Behind -->
+      <div class="video-wrapper">
+        <div class="video-loading-placeholder">
+          <span class="spinner"></span>
+          <p data-ru="Загрузка видео-визуализации..." data-en="Loading video walkthrough...">Загрузка видео-визуализации...</p>
+        </div>
+        
+        <!-- We will embed an elegant botanical loop to represent our project -->
+        <video class="showcase-video" id="showcaseVideo" loop muted playsinline>
+          <source src="https://assets.mixkit.co/videos/preview/mixkit-sunlight-shining-through-green-leaves-of-a-tree-41808-large.mp4" type="video/mp4">
+          <source src="https://assets.mixkit.co/videos/preview/mixkit-camera-moving-through-lush-green-ferns-41618-large.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </div>
+  </div>
+  <!-- Client-Side Vanilla JS script -->
+  <script src="portfooo.js"></script>
+</body>
+</html>
+
+---------------------------------------------------------------------------------------------------------------------------------------
+
+
+/* ==========================================================================
+   GreenSpace Landing Page CSS Stylesheet
+   Designed for: Premium, modern dark aesthetic, rich micro-animations,
+                 responsive layouts, and polished glassmorphism elements.
+   ========================================================================== */
+/* 1. Design Tokens & Root Variables */
+:root {
+  --color-bg-dark: hsl(140, 10%, 6%);
+  --color-bg-card: rgba(255, 255, 255, 0.02);
+  --color-bg-card-hover: rgba(255, 255, 255, 0.05);
+  
+  /* Green Accents */
+  --color-primary: hsl(142, 60%, 45%);
+  --color-primary-glow: hsla(142, 60%, 45%, 0.35);
+  --color-primary-dark: hsl(142, 70%, 25%);
+  --color-accent-light: hsl(142, 50%, 80%);
+  
+  /* Typography Colors */
+  --color-text-primary: hsl(0, 0%, 95%);
+  --color-text-secondary: hsl(140, 6%, 70%);
+  --color-text-muted: hsl(140, 4%, 48%);
+  
+  /* Borders and Glass */
+  --glass-border: 1px solid rgba(255, 255, 255, 0.05);
+  --glass-border-hover: 1px solid rgba(255, 255, 255, 0.12);
+  --glass-glow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  --glass-blur: blur(16px);
+  
+  /* Fonts */
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-header: 'Syne', sans-serif;
+  
+  /* Animations & Transitions */
+  --transition-smooth: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-fast: all 0.25s ease;
+}
+/* 2. Global Resets & Base Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  cursor: none; /* Hide standard cursor for premium custom cursor experience */
+}
+@media (max-width: 1024px) {
+  * {
+    cursor: auto !important; /* Enable standard cursor on touch devices */
+  }
+}
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+  background-color: var(--color-bg-dark);
+  color: var(--color-text-primary);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+body {
+  overflow-x: hidden;
+  position: relative;
+  min-height: 100vh;
+}
+/* Custom Premium Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-bg-dark);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-primary-dark);
+  border-radius: 4px;
+  border: 2px solid var(--color-bg-dark);
+  transition: var(--transition-fast);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-primary);
+}
+/* 3. Ambient Glow Lights */
+.glow-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(120px);
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.15;
+  mix-blend-mode: screen;
+}
+.glow-1 {
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, var(--color-primary) 0%, transparent 70%);
+  top: -100px;
+  right: -50px;
+  animation: orbSway 15s ease-in-out infinite alternate;
+}
+.glow-2 {
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, var(--color-primary-dark) 0%, transparent 70%);
+  top: 50%;
+  left: -200px;
+  animation: orbSway 20s ease-in-out infinite alternate-reverse;
+}
+.glow-3 {
+  width: 450px;
+  height: 450px;
+  background: radial-gradient(circle, var(--color-primary) 0%, transparent 70%);
+  bottom: -100px;
+  right: 10%;
+}
+@keyframes orbSway {
+  0% { transform: translate(0, 0) scale(1); }
+  100% { transform: translate(50px, 30px) scale(1.15); }
+}
+/* 4. Canvas Particle Overlay */
+.leaf-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+/* 5. Custom Cursor Interaction */
+.custom-cursor {
+  width: 8px;
+  height: 8px;
+  background-color: var(--color-primary);
+  border-radius: 50%;
+  position: fixed;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 9999;
+  transition: width 0.3s ease, height 0.3s ease, background-color 0.3s ease;
+}
+.custom-cursor-follower {
+  width: 32px;
+  height: 32px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 50%;
+  position: fixed;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 9998;
+  transition: transform 0.08s ease-out, width 0.3s ease, height 0.3s ease, border-color 0.3s ease;
+}
+/* Hover States for Cursor */
+.custom-cursor.hovering {
+  width: 14px;
+  height: 14px;
+  background-color: var(--color-accent-light);
+}
+.custom-cursor-follower.hovering {
+  width: 48px;
+  height: 48px;
+  border-color: var(--color-primary);
+  background-color: rgba(76, 175, 80, 0.05);
+}
+/* Hide on mobile devices */
+@media (max-width: 1024px) {
+  .custom-cursor,
+  .custom-cursor-follower {
+    display: none;
+  }
+}
+/* 6. Header & Navigation */
+.main-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background: rgba(14, 17, 15, 0.65);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+  transition: var(--transition-smooth);
+}
+.main-header.scrolled {
+  padding: 8px 0;
+  background: rgba(10, 12, 11, 0.85);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+}
+.header-container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: var(--transition-smooth);
+}
+.main-header.scrolled .header-container {
+  padding: 12px 40px;
+}
+/* Logo */
+.logo {
+  text-decoration: none;
+  font-family: var(--font-header);
+  font-weight: 800;
+  font-size: 1.4rem;
+  letter-spacing: -0.5px;
+  color: var(--color-text-primary);
+}
+.logo-badge {
+  position: relative;
+  display: inline-block;
+  padding: 4px 12px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 30px;
+  background: rgba(255, 255, 255, 0.02);
+  transition: var(--transition-fast);
+}
+.logo:hover .logo-badge {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 15px var(--color-primary-glow);
+}
+/* Navigation Links */
+.navbar {
+  display: flex;
+  gap: 36px;
+}
+.nav-link {
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--color-text-secondary);
+  transition: var(--transition-fast);
+  position: relative;
+  padding: 4px 0;
+}
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1.5px;
+  background-color: var(--color-primary);
+  transition: var(--transition-fast);
+}
+.nav-link:hover {
+  color: var(--color-text-primary);
+}
+.nav-link:hover::after {
+  width: 100%;
+}
+/* Header Right Options */
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+.location {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--color-text-primary);
+  position: relative;
+  padding-left: 16px;
+}
+.location::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 6px;
+  height: 6px;
+  background-color: var(--color-primary);
+  border-radius: 50%;
+  box-shadow: 0 0 8px var(--color-primary);
+}
+/* Language Toggle Switch */
+.lang-toggle {
+  background: none;
+  border: none;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+.lang-text {
+  transition: var(--transition-fast);
+  cursor: pointer;
+}
+.lang-text.active {
+  color: var(--color-text-primary);
+}
+.lang-toggle:hover .lang-text:not(.active) {
+  color: var(--color-text-secondary);
+}
+.lang-divider {
+  color: rgba(255, 255, 255, 0.1);
+  font-weight: 300;
+}
+/* Cart Icon Button */
+.cart-btn {
+  background: none;
+  border: none;
+  color: var(--color-text-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition-fast);
+  padding: 8px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+.cart-btn:hover {
+  color: var(--color-primary);
+  border-color: var(--color-primary);
+  background-color: rgba(255, 255, 255, 0.02);
+  box-shadow: 0 0 12px var(--color-primary-glow);
+}
+/* Responsive Mobile Navigation */
+@media (max-width: 768px) {
+  .navbar {
+    display: none; /* Can expand to slide-out later if needed */
+  }
+  .header-container {
+    padding: 15px 20px;
+  }
+  .header-right {
+    gap: 15px;
+  }
+}
+/* 7. Common Layout Containers */
+.page-container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 40px;
+  position: relative;
+  z-index: 10;
+}
+@media (max-width: 768px) {
+  .page-container {
+    padding: 0 20px;
+  }
+}
+/* Glassmorphism Panel Base Tokens */
+.glass-panel {
+  background: var(--color-bg-card);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: var(--glass-border);
+  box-shadow: var(--glass-glow);
+  border-radius: 20px;
+  transition: var(--transition-smooth);
+}
+.glass-panel:hover {
+  background: var(--color-bg-card-hover);
+  border: var(--glass-border-hover);
+  box-shadow: 0 12px 40px 0 rgba(0, 0, 0, 0.45);
+}
+/* 8. Hero Section Layout & Details */
+.hero-section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding-top: 140px;
+  padding-bottom: 80px;
+  position: relative;
+}
+/* Parallax foliage background wrapper */
+.hero-bg-layer {
+  position: absolute;
+  top: 0;
+  left: -10vw;
+  width: 120vw;
+  height: 110%;
+  background-image: linear-gradient(rgba(14, 17, 15, 0.5), rgba(14, 17, 15, 0.9)), url('assets/hero_bg.png');
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+  pointer-events: none;
+  opacity: 0.75;
+  transform: translateY(0);
+  transition: transform 0.1s ease-out;
+}
+.hero-content {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  align-items: center;
+  gap: 60px;
+  width: 100%;
+}
+.hero-left {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+/* Cinematic large typography headers */
+.hero-title {
+  font-family: var(--font-header);
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -2px;
+  color: var(--color-text-primary);
+  background: linear-gradient(135deg, #fff 40%, var(--color-accent-light) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  max-width: 650px;
+}
+.hero-subtitle {
+  font-size: 1.15rem;
+  line-height: 1.6;
+  color: var(--color-text-secondary);
+  max-width: 480px;
+  font-weight: 400;
+}
+/* 3D Potted Plant Glassmorphic Showcase Deck */
+.premium-glass-card {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border-radius: 28px;
+  padding: 40px;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.45);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  position: relative;
+  overflow: hidden;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  transition: transform 0.1s ease-out, border-color 0.5s ease;
+}
+.premium-glass-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(800px circle at var(--mouse-x, 0) var(--mouse-y, 0), rgba(255, 255, 255, 0.05), transparent 40%);
+  z-index: 1;
+  pointer-events: none;
+}
+.premium-glass-card:hover {
+  border-color: rgba(255, 255, 255, 0.12);
+}
+.plant-image-container {
+  width: 250px;
+  height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateZ(50px);
+  filter: drop-shadow(0 20px 30px rgba(0, 0, 0, 0.6));
+  animation: float 6s ease-in-out infinite;
+}
+.plant-image {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+/* Plant floating cycle */
+@keyframes float {
+  0% { transform: translateY(0px) rotate(0deg) translateZ(50px); }
+  50% { transform: translateY(-12px) rotate(2deg) translateZ(50px); }
+  100% { transform: translateY(0px) rotate(0deg) translateZ(50px); }
+}
+/* Hero catalog call-to-action button */
+.catalog-cta-btn {
+  background: var(--color-text-primary);
+  color: var(--color-bg-dark);
+  border: none;
+  width: 100%;
+  padding: 18px 24px;
+  border-radius: 16px;
+  font-size: 1.05rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  transition: var(--transition-smooth);
+  transform: translateZ(30px);
+}
+.catalog-cta-btn span {
+  font-family: var(--font-sans);
+}
+.arrow-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.catalog-cta-btn:hover {
+  background: var(--color-accent-light);
+  transform: translateZ(40px) scale(1.02);
+  box-shadow: 0 10px 25px rgba(255, 255, 255, 0.15);
+}
+.catalog-cta-btn:hover .arrow-icon {
+  transform: translate(3px, -3px);
+}
+/* Responsive Hero Layout Adjustments */
+@media (max-width: 991px) {
+  .hero-content {
+    grid-template-columns: 1fr;
+    gap: 50px;
+    text-align: center;
+  }
+  .hero-title {
+    margin: 0 auto;
+    font-size: 3rem;
+  }
+  .hero-subtitle {
+    margin: 0 auto;
+  }
+  .hero-right {
+    max-width: 450px;
+    margin: 0 auto;
+    width: 100%;
+  }
+  .plant-image-container {
+    width: 220px;
+    height: 220px;
+  }
+}
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 2.3rem;
+  }
+  .hero-section {
+    padding-top: 110px;
+    padding-bottom: 40px;
+  }
+  .premium-glass-card {
+    padding: 24px;
+  }
+}
+/* 9. About Section & Visual Stats Panels */
+.about-section {
+  padding: 80px 0;
+  position: relative;
+}
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  margin-bottom: 60px;
+}
+.about-title-box h2 {
+  font-family: var(--font-header);
+  font-size: 2.5rem;
+  line-height: 1.25;
+  font-weight: 700;
+  letter-spacing: -1.2px;
+}
+.about-text-box {
+  display: flex;
+  align-items: flex-end;
+}
+.about-text-box p {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--color-text-secondary);
+}
+.showcase-container {
+  display: grid;
+  grid-template-columns: 1.3fr 0.7fr;
+  gap: 40px;
+  align-items: stretch;
+}
+/* Office Case Study Card with Video Play trigger */
+.office-showcase-card {
+  position: relative;
+  border-radius: 28px;
+  overflow: hidden;
+  height: 480px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+.showcase-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.video-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  transition: var(--transition-smooth);
+}
+.play-btn {
+  width: 90px;
+  height: 90px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition-smooth);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+}
+.play-icon-triangle {
+  width: 0;
+  height: 0;
+  border-top: 12px solid transparent;
+  border-bottom: 12px solid transparent;
+  border-left: 20px solid var(--color-text-primary);
+  margin-left: 6px;
+  transition: var(--transition-fast);
+}
+/* Card Interaction highlights */
+.office-showcase-card:hover .showcase-img {
+  transform: scale(1.06);
+}
+.office-showcase-card:hover .video-overlay {
+  background: rgba(0, 0, 0, 0.15);
+}
+.office-showcase-card:hover .play-btn {
+  transform: scale(1.1);
+  background: var(--color-text-primary);
+  border-color: var(--color-text-primary);
+  box-shadow: 0 0 40px var(--color-primary-glow);
+}
+.office-showcase-card:hover .play-icon-triangle {
+  border-left-color: var(--color-bg-dark);
+}
+/* Glass panel vertical stats panel stack */
+.stats-panel-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: space-between;
+}
+.stat-card {
+  padding: 30px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-grow: 1;
+}
+.stat-number {
+  font-family: var(--font-header);
+  font-size: 3.2rem;
+  font-weight: 700;
+  line-height: 1;
+  margin-bottom: 8px;
+  color: var(--color-text-primary);
+  letter-spacing: -1.5px;
+}
+.stat-label-unit {
+  font-family: var(--font-sans);
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: var(--color-text-secondary);
+  letter-spacing: 0;
+  margin-left: 4px;
+}
+.stat-desc {
+  font-size: 0.95rem;
+  color: var(--color-text-secondary);
+  font-weight: 400;
+}
+/* Responsive adjustments for showcase grid */
+@media (max-width: 991px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .about-title-box h2 {
+    font-size: 2.1rem;
+  }
+  .showcase-container {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  .office-showcase-card {
+    height: 380px;
+  }
+  .stats-panel-stack {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  .stat-card {
+    flex: 1 1 calc(33.333% - 14px);
+    min-width: 220px;
+    padding: 24px;
+  }
+}
+@media (max-width: 580px) {
+  .stats-panel-stack {
+    flex-direction: column;
+  }
+  .stat-card {
+    width: 100%;
+  }
+}
+/* 10. Why Us Section (4 Reasons Frosted Cards Grid) */
+.why-us-section {
+  padding: 100px 0;
+}
+.section-title {
+  font-family: var(--font-header);
+  font-size: 2.6rem;
+  font-weight: 700;
+  line-height: 1.25;
+  margin-bottom: 60px;
+  letter-spacing: -1px;
+}
+.text-center {
+  text-align: center;
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.reasons-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+.reason-card {
+  padding: 40px 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: relative;
+  overflow: hidden;
+}
+.reason-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: var(--color-primary-dark);
+  transition: var(--transition-smooth);
+}
+.reason-card:hover::before {
+  background: var(--color-primary);
+  box-shadow: 0 0 12px var(--color-primary);
+}
+.reason-number {
+  font-family: var(--font-header);
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: rgba(255, 255, 255, 0.08);
+  line-height: 1;
+  transition: var(--transition-smooth);
+}
+.reason-card:hover .reason-number {
+  color: var(--color-primary-glow);
+  transform: translateY(-4px);
+}
+.reason-title {
+  font-family: var(--font-sans);
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+.reason-text {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--color-text-secondary);
+}
+@media (max-width: 1100px) {
+  .reasons-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 640px) {
+  .reasons-grid {
+    grid-template-columns: 1fr;
+  }
+  .section-title {
+    font-size: 2rem;
+    margin-bottom: 40px;
+  }
+}
+/* 11. Contact Form Section & Botanical Stem Overlay */
+.contact-section {
+  padding: 100px 0;
+  position: relative;
+}
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+.contact-left {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  position: relative;
+  min-height: 520px;
+  justify-content: space-between;
+}
+.contact-content-wrapper {
+  z-index: 5;
+}
+.contact-title {
+  font-family: var(--font-header);
+  font-size: 2.8rem;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -1.2px;
+  margin-bottom: 12px;
+}
+.contact-subtitle {
+  font-size: 1.25rem;
+  color: var(--color-primary);
+  font-weight: 500;
+}
+.social-links {
+  display: flex;
+  gap: 16px;
+  margin-top: 30px;
+}
+.social-circle {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text-primary);
+  text-decoration: none;
+  background: rgba(255, 255, 255, 0.02);
+  transition: var(--transition-smooth);
+}
+.social-circle:hover {
+  background: var(--color-text-primary);
+  color: var(--color-bg-dark);
+  border-color: var(--color-text-primary);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(255, 255, 255, 0.15);
+}
+/* botanical stem overlap footer */
+.botanical-stem-wrapper {
+  position: absolute;
+  bottom: -150px;
+  left: -80px;
+  width: 440px;
+  z-index: 2;
+  pointer-events: none;
+  opacity: 0.85;
+  transform: rotate(0deg);
+  transition: transform 0.1s ease-out;
+}
+.botanical-stem-img {
+  width: 100%;
+  height: auto;
+}
+/* Glass form deck inputs styling */
+.glass-form-deck {
+  background: rgba(255, 255, 255, 0.015);
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 28px;
+  padding: 48px;
+  box-shadow: var(--glass-glow);
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  z-index: 5;
+  position: relative;
+}
+.form-group {
+  position: relative;
+  width: 100%;
+}
+.form-input {
+  width: 100%;
+  padding: 18px 24px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 16px;
+  outline: none;
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  color: var(--color-text-primary);
+  transition: var(--transition-fast);
+}
+.form-textarea {
+  resize: none;
+}
+.form-label {
+  position: absolute;
+  left: 24px;
+  top: 18px;
+  font-size: 1rem;
+  color: var(--color-text-secondary);
+  pointer-events: none;
+  transition: var(--transition-fast);
+}
+/* Float placeholders logic */
+.form-input:focus,
+.form-input:not(:placeholder-shown) {
+  border-color: var(--color-primary);
+  background: rgba(255, 255, 255, 0.04);
+  box-shadow: 0 0 15px rgba(76, 175, 80, 0.08);
+}
+.form-input:focus + .form-label,
+.form-input:not(:placeholder-shown) + .form-label {
+  top: -10px;
+  left: 18px;
+  font-size: 0.8rem;
+  color: var(--color-primary);
+  background-color: hsl(140, 10%, 6%);
+  padding: 0 8px;
+  border-radius: 4px;
+}
+/* Input validation visual alerts */
+.form-input.invalid {
+  border-color: hsl(0, 70%, 50%) !important;
+  box-shadow: 0 0 15px rgba(244, 67, 54, 0.1) !important;
+}
+.form-input.invalid + .form-label {
+  color: hsl(0, 70%, 55%) !important;
+}
+.form-error {
+  position: absolute;
+  bottom: -18px;
+  left: 8px;
+  font-size: 0.75rem;
+  color: hsl(0, 70%, 55%);
+  opacity: 0;
+  transform: translateY(-4px);
+  transition: var(--transition-fast);
+  pointer-events: none;
+}
+.form-input.invalid ~ .form-error {
+  opacity: 1;
+  transform: translateY(0);
+}
+/* Submit send button detailing */
+.submit-btn {
+  width: 100%;
+  padding: 18px;
+  border-radius: 16px;
+  background: transparent;
+  color: var(--color-text-primary);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  font-family: var(--font-sans);
+  font-size: 1.05rem;
+  font-weight: 600;
+  cursor: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition-smooth);
+  position: relative;
+  overflow: hidden;
+}
+.submit-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.05), transparent);
+  transition: 0.5s;
+}
+.submit-btn:hover {
+  background: var(--color-primary-dark);
+  border-color: var(--color-primary);
+  box-shadow: 0 8px 24px var(--color-primary-glow);
+}
+.submit-btn:hover::before {
+  left: 100%;
+}
+.submit-btn:active {
+  transform: scale(0.98);
+}
+/* Success status micro-animation */
+.success-icon-wrapper {
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+.submit-btn.success {
+  background-color: var(--color-primary) !important;
+  border-color: var(--color-primary) !important;
+  color: var(--color-bg-dark) !important;
+}
+.submit-btn.success .btn-text {
+  display: none;
+}
+.submit-btn.success .success-icon-wrapper {
+  display: flex;
+  animation: popIn 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+@keyframes popIn {
+  0% { transform: scale(0) rotate(-15deg); opacity: 0; }
+  100% { transform: scale(1) rotate(0deg); opacity: 1; }
+}
+.form-disclaimer {
+  font-size: 0.78rem;
+  line-height: 1.5;
+  color: var(--color-text-muted);
+  text-align: center;
+}
+@media (max-width: 991px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+  .contact-left {
+    min-height: auto;
+    gap: 30px;
+  }
+  .botanical-stem-wrapper {
+    display: none; /* Hide absolute stems on mobile/tablet to avoid overflow clutter */
+  }
+  .glass-form-deck {
+    padding: 32px;
+  }
+}
+/* 12. Footer Styling */
+.main-footer {
+  border-top: 1px solid rgba(255, 255, 255, 0.03);
+  padding: 60px 0;
+  background: rgba(10, 12, 11, 0.95);
+  position: relative;
+  z-index: 10;
+}
+.footer-container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer-nav {
+  display: flex;
+  gap: 36px;
+}
+.footer-link {
+  text-decoration: none;
+  font-size: 0.9rem;
+  color: var(--color-text-secondary);
+  transition: var(--transition-fast);
+}
+.footer-link:hover {
+  color: var(--color-text-primary);
+}
+.footer-logo {
+  font-family: var(--font-header);
+  font-weight: 800;
+  font-size: 1.25rem;
+  letter-spacing: -0.5px;
+  color: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  padding: 4px 12px;
+  border-radius: 20px;
+}
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    gap: 30px;
+    text-align: center;
+    padding: 0 20px;
+  }
+  .footer-nav {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+/* 13. High-Quality Modal Systems */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+  padding: 24px;
+}
+.modal-overlay.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+/* Frosted glass dialog layout */
+.glass-modal-card {
+  background: rgba(14, 18, 16, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(30px);
+  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.7);
+  border-radius: 32px;
+  width: 100%;
+  max-width: 900px;
+  max-height: 85vh;
+  overflow-y: auto;
+  position: relative;
+  padding: 48px;
+  transform: translateY(30px) scale(0.95);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.modal-overlay.active .glass-modal-card {
+  transform: translateY(0) scale(1);
+}
+/* Modal Close Cross */
+.modal-close-btn {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  color: var(--color-text-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition-fast);
+  cursor: none;
+  z-index: 10;
+}
+.modal-close-btn:hover {
+  background: var(--color-text-primary);
+  color: var(--color-bg-dark);
+  border-color: var(--color-text-primary);
+}
+.modal-header-content {
+  margin-bottom: 36px;
+}
+.modal-title {
+  font-family: var(--font-header);
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+.modal-subtitle {
+  font-size: 1rem;
+  color: var(--color-text-secondary);
+}
+/* Catalog modal category filter tags */
+.catalog-filters {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  padding-bottom: 20px;
+}
+.filter-tab {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  padding: 10px 20px;
+  border-radius: 12px;
+  color: var(--color-text-secondary);
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: none;
+  transition: var(--transition-fast);
+}
+.filter-tab.active,
+.filter-tab:hover {
+  background: var(--color-text-primary);
+  color: var(--color-bg-dark);
+  border-color: var(--color-text-primary);
+}
+/* Catalog visual layout grids */
+.catalog-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+.catalog-item-card {
+  padding: 24px;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  opacity: 1;
+  transform: scale(1);
+  transition: opacity 0.4s ease, transform 0.4s ease, background 0.3s ease, border-color 0.3s ease;
+}
+.catalog-item-card.hidden {
+  opacity: 0;
+  transform: scale(0.9);
+  pointer-events: none;
+  position: absolute;
+  width: 0;
+  height: 0;
+  padding: 0;
+  margin: 0;
+  border: none;
+  overflow: hidden;
+}
+.item-img-box {
+  width: 110px;
+  height: 110px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 16px;
+  padding: 12px;
+  flex-shrink: 0;
+  box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.2);
+}
+.item-img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+.item-info {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.item-name {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+.item-tags {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+.item-tag {
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 3px 8px;
+  border-radius: 6px;
+}
+.air-tag {
+  background: rgba(76, 175, 80, 0.1);
+  color: hsl(142, 60%, 70%);
+}
+.low-tag {
+  background: rgba(33, 150, 243, 0.1);
+  color: hsl(207, 90%, 70%);
+}
+.floor-tag {
+  background: rgba(255, 152, 0, 0.1);
+  color: hsl(36, 100%, 70%);
+}
+.item-desc {
+  font-size: 0.85rem;
+  line-height: 1.5;
+  color: var(--color-text-secondary);
+}
+/* Video modal specific styling */
+.video-modal-container {
+  max-width: 960px;
+  padding: 24px;
+  overflow: hidden;
+}
+.video-wrapper {
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+  position: relative;
+  border-radius: 18px;
+  overflow: hidden;
+  background: #000;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.8);
+}
+.video-loading-placeholder {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  background: #090c0a;
+  z-index: 1;
+  transition: opacity 0.5s ease;
+}
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid rgba(255, 255, 255, 0.05);
+  border-radius: 50%;
+  border-top-color: var(--color-primary);
+  animation: spin 1s linear infinite;
+}
+@keyframes spin {
+  100% { transform: rotate(360deg); }
+}
+.showcase-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.8s ease;
+}
+.video-wrapper.loaded .video-loading-placeholder {
+  opacity: 0;
+  pointer-events: none;
+}
+.video-wrapper.loaded .showcase-video {
+  opacity: 1;
+}
+@media (max-width: 768px) {
+  .glass-modal-card {
+    padding: 30px 20px;
+  }
+  .modal-title {
+    font-size: 1.7rem;
+  }
+  .catalog-grid {
+    grid-template-columns: 1fr;
+  }
+  .catalog-item-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .item-img-box {
+    width: 100%;
+    height: 160px;
+  }
+}
+/* 14. Performance-Friendly Stagger Animations */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(35px) scale(0.98);
+  filter: blur(8px);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), 
+              transform 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+              filter 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform, filter;
+}
+.animate-on-scroll.revealed {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  filter: blur(0);
+}
+.delay-1 { transition-delay: 0.15s; }
+.delay-2 { transition-delay: 0.3s; }
+.delay-3 { transition-delay: 0.45s; }
+
+-----------------------------------------------------------------------------------------------------------------------------------------
+
+
+/* ==========================================================================
+   GreenSpace Landing Page JavaScript Engine
+   Features:
+   1. Premium elastic custom cursors
+   2. HTML5 Canvas floating leaf particle system with mouse-repelling sways
+   3. 3D card hover tilt & glare gloss coordinates
+   4. High-performance scroll parallax (requestAnimationFrame optimized)
+   5. Intersection Observer scroll-triggered content reveals
+   6. Dual-language (RU/EN) translation engine with fade highlights
+   7. Catalog client-side tab filtering & interactive modals
+   8. Frosted glass form deck validation & micro-success transitions
+   ========================================================================== */
+document.addEventListener('DOMContentLoaded', () => {
+  
+  // ==========================================
+  // 1. DUAL-LANGUAGE TRANSLATION ENGINE
+  // ==========================================
+  const langToggle = document.getElementById('langToggle');
+  let currentLang = 'ru'; // Default to Russian as per reference mockup
+  function toggleLanguage() {
+    currentLang = currentLang === 'ru' ? 'en' : 'ru';
+    
+    // Toggle active state of toggle text nodes
+    const langTexts = langToggle.querySelectorAll('.lang-text');
+    langTexts.forEach(txt => {
+      if (txt.textContent.trim() === currentLang.toUpperCase()) {
+        txt.classList.add('active');
+      } else {
+        txt.classList.remove('active');
+      }
+    });
+    // Translate all elements with data-ru / data-en attributes
+    const translatableElements = document.querySelectorAll('[data-ru]');
+    
+    // Smooth transition overlay effect
+    document.body.style.transition = 'opacity 0.25s ease';
+    document.body.style.opacity = '0.9';
+    setTimeout(() => {
+      translatableElements.forEach(el => {
+        const text = currentLang === 'ru' ? el.getAttribute('data-ru') : el.getAttribute('data-en');
+        
+        // Handle input placeholders specifically
+        if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
+          // If label exists, it shifts automatically, but we can set placeholder if needed
+          const label = el.parentNode.querySelector('.form-label');
+          if (label) {
+            label.textContent = currentLang === 'ru' ? label.getAttribute('data-ru') : label.getAttribute('data-en');
+          }
+          const errSpan = el.parentNode.querySelector('.form-error');
+          if (errSpan) {
+            errSpan.textContent = currentLang === 'ru' ? errSpan.getAttribute('data-ru') : errSpan.getAttribute('data-en');
+          }
+        } else {
+          // Keep inner structures (like SVGs/spans) if we only want to change direct text
+          if (el.querySelector('.arrow-icon') || el.querySelector('.btn-text')) {
+            const innerSpan = el.querySelector('span:first-child');
+            if (innerSpan) {
+              innerSpan.textContent = text;
+            }
+          } else {
+            el.textContent = text;
+          }
+        }
+      });
+      
+      // Update HTML lang attribute
+      document.documentElement.lang = currentLang;
+      document.body.style.opacity = '1';
+    }, 200);
+  }
+  if (langToggle) {
+    langToggle.addEventListener('click', toggleLanguage);
+  }
+  // ==========================================
+  // 2. PREMIUM CUSTOM CURSOR INTERACTOR
+  // ==========================================
+  const customCursor = document.getElementById('customCursor');
+  const cursorFollower = document.getElementById('cursorFollower');
+  
+  let mouseX = 0, mouseY = 0;
+  let cursorX = 0, cursorY = 0;
+  let followerX = 0, followerY = 0;
+  document.addEventListener('mousemove', (e) => {
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+    
+    // Instantly position main micro-dot cursor
+    if (customCursor) {
+      customCursor.style.left = `${mouseX}px`;
+      customCursor.style.top = `${mouseY}px`;
+    }
+  });
+  // Elastic animation loop for follower ring
+  function animateCursor() {
+    // Linear interpolation for smooth lag / elastic follow
+    const easeFactor = 0.15;
+    followerX += (mouseX - followerX) * easeFactor;
+    followerY += (mouseY - followerY) * easeFactor;
+    if (cursorFollower) {
+      cursorFollower.style.left = `${followerX}px`;
+      cursorFollower.style.top = `${followerY}px`;
+    }
+    requestAnimationFrame(animateCursor);
+  }
+  animateCursor();
+  // Add scale states on hoverable targets
+  const interactiveSelectors = 'a, button, input, textarea, .office-showcase-card, .reason-card, .logo-badge, .social-circle, .filter-tab';
+  
+  function updateCursorHoverEvents() {
+    const hoverables = document.querySelectorAll(interactiveSelectors);
+    hoverables.forEach(item => {
+      item.addEventListener('mouseenter', () => {
+        customCursor?.classList.add('hovering');
+        cursorFollower?.classList.add('hovering');
+      });
+      item.addEventListener('mouseleave', () => {
+        customCursor?.classList.remove('hovering');
+        cursorFollower?.classList.remove('hovering');
+      });
+    });
+  }
+  updateCursorHoverEvents();
+  // Hide cursor when leaving window
+  document.addEventListener('mouseleave', () => {
+    if (customCursor) customCursor.style.opacity = '0';
+    if (cursorFollower) cursorFollower.style.opacity = '0';
+  });
+  
+  document.addEventListener('mouseenter', () => {
+    if (customCursor) customCursor.style.opacity = '1';
+    if (cursorFollower) cursorFollower.style.opacity = '1';
+  });
+  // ==========================================
+  // 3. CANVAS INTERACTIVE FLOATING LEAVES
+  // ==========================================
+  const canvas = document.getElementById('leafCanvas');
+  const ctx = canvas?.getContext('2d');
+  
+  let width = canvas.width = window.innerWidth;
+  let height = canvas.height = window.innerHeight;
+  
+  window.addEventListener('resize', () => {
+    if (canvas) {
+      width = canvas.width = window.innerWidth;
+      height = canvas.height = window.innerHeight;
+    }
+  });
+  // Load custom-generated leaf asset
+  const leafImage = new Image();
+  leafImage.src = 'assets/leaf_particle1.png';
+  let leafImageLoaded = false;
+  leafImage.onload = () => {
+    leafImageLoaded = true;
+  };
+  class LeafParticle {
+    constructor() {
+      this.reset();
+      this.y = Math.random() * height; // Distribute initially across entire screen
+    }
+    reset() {
+      this.x = Math.random() * width;
+      this.y = -50;
+      this.size = Math.random() * 20 + 15; // Width of leaf
+      this.aspectRatio = 1.3; // Monstera aspect ratio
+      this.speedY = Math.random() * 0.8 + 0.4;
+      this.speedX = Math.random() * 0.4 - 0.2;
+      this.angle = Math.random() * Math.PI * 2;
+      this.spinSpeed = Math.random() * 0.01 - 0.005;
+      this.swayRange = Math.random() * 40 + 20;
+      this.swaySpeed = Math.random() * 0.02 + 0.005;
+      this.swayPhase = Math.random() * Math.PI * 2;
+      this.opacity = Math.random() * 0.35 + 0.15; // Subtle floating layer
+    }
+    update() {
+      this.y += this.speedY;
+      this.swayPhase += this.swaySpeed;
+      this.x += this.speedX + Math.sin(this.swayPhase) * 0.3;
+      this.angle += this.spinSpeed;
+      // Mouse repulsion - blow leaves away gently
+      const dx = mouseX - this.x;
+      const dy = mouseY - this.y;
+      const dist = Math.hypot(dx, dy);
+      const activeRadius = 150;
+      if (dist < activeRadius) {
+        const force = (activeRadius - dist) / activeRadius;
+        // Direction vectors away from mouse
+        const angleAway = Math.atan2(this.y - mouseY, this.x - mouseX);
+        this.x += Math.cos(angleAway) * force * 4;
+        this.y += Math.sin(angleAway) * force * 4;
+      }
+      // Loop particles back to top when exiting bottom boundary
+      if (this.y > height + 50 || this.x < -50 || this.x > width + 50) {
+        this.reset();
+      }
+    }
+    draw() {
+      ctx.save();
+      ctx.translate(this.x, this.y);
+      ctx.rotate(this.angle);
+      ctx.globalAlpha = this.opacity;
+      if (leafImageLoaded) {
+        // Draw the premium PNG leaf
+        ctx.drawImage(leafImage, -this.size / 2, -(this.size * this.aspectRatio) / 2, this.size, this.size * this.aspectRatio);
+      } else {
+        // Fallback Vector Drawing: High-end smooth leaf shape using cubic beziers
+        ctx.fillStyle = '#4caf50';
+        ctx.beginPath();
+        ctx.moveTo(0, -this.size);
+        ctx.quadraticCurveTo(this.size * 0.6, -this.size * 0.4, 0, this.size);
+        ctx.quadraticCurveTo(-this.size * 0.6, -this.size * 0.4, 0, -this.size);
+        ctx.fill();
+        
+        // Draw midrib
+        ctx.strokeStyle = '#2e7d32';
+        ctx.lineWidth = 1;
+        ctx.beginPath();
+        ctx.moveTo(0, -this.size);
+        ctx.lineTo(0, this.size);
+        ctx.stroke();
+      }
+      ctx.restore();
+    }
+  }
+  // Create particle pool
+  const leafCount = 20;
+  const leaves = Array.from({ length: leafCount }, () => new LeafParticle());
+  function animateLeaves() {
+    if (ctx) {
+      ctx.clearRect(0, 0, width, height);
+      leaves.forEach(leaf => {
+        leaf.update();
+        leaf.draw();
+      });
+    }
+    requestAnimationFrame(animateLeaves);
+  }
+  animateLeaves();
+  // ==========================================
+  // 4. 3D POTTED PLANT CARD TILT (HERO ELEMENT)
+  // ==========================================
+  const plantCard = document.getElementById('heroPlantCard');
+  if (plantCard) {
+    plantCard.addEventListener('mousemove', (e) => {
+      const rect = plantCard.getBoundingClientRect();
+      // Mouse coordinates relative to card center (normalized between -0.5 and 0.5)
+      const x = (e.clientX - rect.left) / rect.width - 0.5;
+      const y = (e.clientY - rect.top) / rect.height - 0.5;
+      
+      // Calculate tilt limits
+      const maxTiltX = 12; // tilt degrees up/down
+      const maxTiltY = 12; // tilt degrees left/right
+      
+      const tiltX = -y * maxTiltX;
+      const tiltY = x * maxTiltY;
+      // Apply transform styles
+      plantCard.style.transform = `rotateX(${tiltX}deg) rotateY(${tiltY}deg) scale(1.025)`;
+      
+      // Send mouse coordinates to css properties for glossy spotlight tracking
+      const localX = e.clientX - rect.left;
+      const localY = e.clientY - rect.top;
+      plantCard.style.setProperty('--mouse-x', `${localX}px`);
+      plantCard.style.setProperty('--mouse-y', `${localY}px`);
+    });
+    plantCard.addEventListener('mouseleave', () => {
+      // Revert smoothly to flat alignment
+      plantCard.style.transform = `rotateX(0deg) rotateY(0deg) scale(1)`;
+    });
+  }
+  // ==========================================
+  // 5. HIGH-PERFORMANCE SCROLL PARALLAX ENGINE
+  // ==========================================
+  const heroBg = document.getElementById('heroBg');
+  const botanicalStem = document.getElementById('botanicalStem');
+  const header = document.getElementById('header');
+  
+  let lastScrollY = 0;
+  let ticking = false;
+  function updateParallax(scrollY) {
+    // Parallax on hero foliage background layer
+    if (heroBg) {
+      // Moves slower than background to create layered depth
+      heroBg.style.transform = `translateY(${scrollY * 0.35}px)`;
+    }
+    // Scroll-bound shift and organic rotation on footer botanical overlay stem
+    if (botanicalStem) {
+      const offset = (scrollY - botanicalStem.offsetTop) * 0.15;
+      botanicalStem.style.transform = `translateY(${offset}px) rotate(${offset * 0.03}deg)`;
+    }
+    // Header compression shrink
+    if (header) {
+      if (scrollY > 50) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    }
+  }
+  window.addEventListener('scroll', () => {
+    lastScrollY = window.scrollY;
+    
+    // Throttle scroll events to requestAnimationFrame for high-performance rendering
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        updateParallax(lastScrollY);
+        ticking = false;
+      });
+      ticking = true;
+    }
+  });
+  // ==========================================
+  // 6. INTERSECTION OBSERVER FOR FADE REVEALS
+  // ==========================================
+  const revealElements = document.querySelectorAll('.animate-on-scroll');
+  
+  const observerOptions = {
+    root: null,
+    rootMargin: '0px',
+    threshold: 0.12 // Trigger when 12% of card is in screen
+  };
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('revealed');
+        // Once revealed, no need to keep observing
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+  revealElements.forEach(el => observer.observe(el));
+  // ==========================================
+  // 7. PREMIUM MODAL SYSTEMS & CATALOG ACTION
+  // ==========================================
+  
+  // Modals DOM references
+  const catalogModal = document.getElementById('catalogModal');
+  const videoModal = document.getElementById('videoModal');
+  const showcaseVideo = document.getElementById('showcaseVideo');
+  const videoWrapper = document.querySelector('.video-wrapper');
+  
+  // Triggers DOM references
+  const openCatalogBtns = [
+    document.getElementById('openCatalogBtn'),
+    document.getElementById('openCatalogBtnHeader'),
+    document.getElementById('openCatalogBtnFooter')
+  ];
+  const closeCatalogBtn = document.getElementById('closeCatalogBtn');
+  const playVideoBtn = document.getElementById('playVideoBtn');
+  const officeShowcase = document.getElementById('officeShowcase');
+  const closeVideoBtn = document.getElementById('closeVideoBtn');
+  // Generic helper to open any modal
+  function openModal(modal) {
+    modal.classList.add('active');
+    document.body.style.overflow = 'hidden'; // Lock background scrolling
+  }
+  // Generic helper to close any modal
+  function closeModal(modal) {
+    modal.classList.remove('active');
+    document.body.style.overflow = ''; // Unlock scrolling
+  }
+  // Bind catalog triggers
+  openCatalogBtns.forEach(btn => {
+    if (btn) {
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        openModal(catalogModal);
+      });
+    }
+  });
+  if (closeCatalogBtn) {
+    closeCatalogBtn.addEventListener('click', () => closeModal(catalogModal));
+  }
+  // Bind video triggers
+  const videoTriggers = [playVideoBtn, officeShowcase];
+  videoTriggers.forEach(trigger => {
+    if (trigger) {
+      trigger.addEventListener('click', (e) => {
+        e.preventDefault();
+        openModal(videoModal);
+        
+        // Start load and play sequence for video loop
+        if (showcaseVideo) {
+          showcaseVideo.load();
+          showcaseVideo.play().then(() => {
+            videoWrapper.classList.add('loaded');
+          }).catch(err => {
+            console.log("Autoplay blocked or load failed:", err);
+          });
+        }
+      });
+    }
+  });
+  if (closeVideoBtn) {
+    closeVideoBtn.addEventListener('click', () => {
+      closeModal(videoModal);
+      if (showcaseVideo) {
+        showcaseVideo.pause();
+        videoWrapper.classList.remove('loaded');
+      }
+    });
+  }
+  // Close modals on clicking overlay backdrop
+  [catalogModal, videoModal].forEach(modal => {
+    if (modal) {
+      modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+          closeModal(modal);
+          if (modal === videoModal && showcaseVideo) {
+            showcaseVideo.pause();
+            videoWrapper.classList.remove('loaded');
+          }
+        }
+      });
+    }
+  });
+  // Close modals on Escape keypress
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      if (catalogModal.classList.contains('active')) closeModal(catalogModal);
+      if (videoModal.classList.contains('active')) {
+        closeModal(videoModal);
+        if (showcaseVideo) {
+          showcaseVideo.pause();
+          videoWrapper.classList.remove('loaded');
+        }
+      }
+    }
+  });
+  // ==========================================
+  // 8. CLIENT-SIDE CATALOG TAB FILTERING
+  // ==========================================
+  const filterTabs = document.querySelectorAll('.filter-tab');
+  const catalogItems = document.querySelectorAll('.catalog-item-card');
+  filterTabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      // Toggle active states
+      filterTabs.forEach(t => t.classList.remove('active'));
+      tab.classList.add('active');
+      const filterVal = tab.getAttribute('data-filter');
+      catalogItems.forEach(item => {
+        const itemCategories = item.getAttribute('data-category').split(' ');
+        if (filterVal === 'all' || itemCategories.includes(filterVal)) {
+          // Smooth fade-in sequence
+          item.classList.remove('hidden');
+          setTimeout(() => {
+            item.style.opacity = '1';
+            item.style.transform = 'scale(1)';
+          }, 50);
+        } else {
+          // Smooth fade-out sequence
+          item.style.opacity = '0';
+          item.style.transform = 'scale(0.9)';
+          setTimeout(() => {
+            item.classList.add('hidden');
+          }, 300);
+        }
+      });
+      
+      // Update cursor listener because of DOM changes
+      setTimeout(updateCursorHoverEvents, 350);
+    });
+  });
+  // ==========================================
+  // 9. PREMIUM CONTACT FORM VALIDATION
+  // ==========================================
+  const contactForm = document.getElementById('contactForm');
+  const formName = document.getElementById('formName');
+  const formPhone = document.getElementById('formPhone');
+  const submitBtn = document.getElementById('submitBtn');
+  function validateInput(input) {
+    if (!input) return false;
+    let isValid = true;
+    // Check custom bounds
+    if (input.id === 'formName') {
+      isValid = input.value.trim().length >= 2;
+    } else if (input.id === 'formPhone') {
+      // Basic international phone regex or 10-digit standard
+      const phoneRegex = /^[+]?[0-9\s\-()]{7,18}$/;
+      isValid = phoneRegex.test(input.value.trim());
+    }
+    if (isValid) {
+      input.classList.remove('invalid');
+    } else {
+      input.classList.add('invalid');
+    }
+    return isValid;
+  }
+  // Clear invalid states on keystroke input
+  [formName, formPhone].forEach(input => {
+    if (input) {
+      input.addEventListener('input', () => {
+        if (input.classList.contains('invalid')) {
+          validateInput(input);
+        }
+      });
+      // Validate on blur out
+      input.addEventListener('blur', () => {
+        if (input.value.trim() !== "") {
+          validateInput(input);
+        }
+      });
+    }
+  });
+  if (contactForm) {
+    contactForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const isNameValid = validateInput(formName);
+      const isPhoneValid = validateInput(formPhone);
+      if (isNameValid && isPhoneValid) {
+        // Disable submission actions during loading
+        submitBtn.disabled = true;
+        
+        // Dynamic loading visual representation
+        const originalText = submitBtn.querySelector('.btn-text').textContent;
+        const loadingText = currentLang === 'ru' ? 'Отправка...' : 'Sending...';
+        submitBtn.querySelector('.btn-text').textContent = loadingText;
+        // Simulate seamless server delivery
+        setTimeout(() => {
+          // Success State Micro-animations
+          submitBtn.classList.add('success');
+          
+          // Toast notifications or custom alerts
+          const successAlert = document.createElement('div');
+          successAlert.className = 'glass-panel';
+          successAlert.style.position = 'fixed';
+          successAlert.style.bottom = '30px';
+          successAlert.style.right = '30px';
+          successAlert.style.padding = '20px 30px';
+          successAlert.style.zIndex = '9999';
+          successAlert.style.borderLeft = '4px solid var(--color-primary)';
+          successAlert.style.animation = 'slideInToast 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards';
+          
+          const alertTitle = currentLang === 'ru' ? 'Заявка отправлена!' : 'Request Sent!';
+          const alertBody = currentLang === 'ru' ? 'Мы свяжемся с вами в течение 15 минут.' : 'We will reach out to you within 15 minutes.';
+          
+          successAlert.innerHTML = `
+            <h4 style="font-family: var(--font-header); font-size: 1.15rem; margin-bottom: 4px; color: var(--color-text-primary);">${alertTitle}</h4>
+            <p style="font-size: 0.85rem; color: var(--color-text-secondary);">${alertBody}</p>
+          `;
+          
+          // Toast reveal keyframe style injector
+          const style = document.createElement('style');
+          style.innerHTML = `
+            @keyframes slideInToast {
+              0% { transform: translateY(50px); opacity: 0; }
+              100% { transform: translateY(0); opacity: 1; }
+            }
+          `;
+          document.head.appendChild(style);
+          document.body.appendChild(successAlert);
+          // Reset Form decks
+          contactForm.reset();
+          
+          // Clear styles after 4 seconds
+          setTimeout(() => {
+            submitBtn.classList.remove('success');
+            submitBtn.disabled = false;
+            submitBtn.querySelector('.btn-text').textContent = originalText;
+            
+            // Fade out alert toast
+            successAlert.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+            successAlert.style.opacity = '0';
+            successAlert.style.transform = 'translateY(20px)';
+            setTimeout(() => {
+              successAlert.remove();
+            }, 500);
+          }, 4000);
+        }, 1500);
+      }
+    });
+  }
+});
